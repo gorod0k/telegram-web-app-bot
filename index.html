@@ -343,7 +343,7 @@
     <button id="with_webview_btn" onclick="DemoApp.sendMessage('', true);">Send «Hello, World!» with inline webview button</button>
     <button id="data_btn" onclick="DemoApp.sendTime(true);">Send current time to bot (x10)</button>
     <button onclick="DemoApp.expand();">Expand Webview</button>
-    <button onclick="DemoApp.toggleMainButton(this);">Hide Main Button</button>
+    <button onclick="DemoApp.toggleMainButton(this);">Main Button</button>
     <input type="text" placeholder="Input text in regular input..." id="regular_field"/>
     <div
             class="input"
@@ -429,12 +429,11 @@
 
 <script type="application/javascript">
 
-    /*
-     * This is a demo code for Telegram WebApp for Bots
-     * It contains basic examples of how to use the API
-     * Note: all requests to backend are disabled in this demo, you should use your own backend
-     */
-
+/*
+* This is a demo code for Telegram WebApp for Bots
+* It contains basic examples of how to use the API
+* Note: all requests to backend are disabled in this demo, you should use your own backend
+*/
     const DemoApp =
     {
         initData      : Telegram.WebApp.initData || '',
@@ -455,7 +454,8 @@
         close() {
             Telegram.WebApp.close();
         },
-        toggleMainButton(el) {
+        toggleMainButton(el)
+        {
             const mainButton = Telegram.WebApp.MainButton;
             if (mainButton.isVisible) {
                 mainButton.hide();
