@@ -9,8 +9,10 @@
     <meta name="MobileOptimized" content="176"/>
     <meta name="HandheldFriendly" content="True"/>
     <meta name="robots" content="noindex,nofollow"/>
-    <title></title>
-    <script src="https://telegram.org/js/telegram-web-app.js?1"></script>
+    <title> Title </title>
+    <script src="https://telegram.org/js/telegram-web-app.js?1">
+        // https://github.com/riobits/Telegram-Web-API-Cheatsheet
+    </script>
     <script>
         function setThemeClass()
         {
@@ -444,7 +446,7 @@
             Telegram.WebApp.ready();
             Telegram.WebApp.MainButton.setParams({
                 text      : 'CLOSE WEBVIEW',
-                is_visible: false
+                is_visible: false   // HIDE MAIN BTN
             }).onClick(DemoApp.close);
         },
         expand() {
