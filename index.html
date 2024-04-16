@@ -848,6 +848,11 @@
     document.getElementById('ver').innerHTML      = Telegram.WebApp.version;
     document.getElementById('platform').innerHTML = Telegram.WebApp.platform;
 
+    // ? работает только в attachment menu
+    let pic = document.createElement('img'); //создаем img
+    pic.src = Telegram.WebApp.initDataUnsafe.user.photo_url; //задаём src 
+    document.getElementById('ver').appendChild(pic); //добавляем элемент в карточку 
+
     if (DemoApp.initDataUnsafe.receiver) {
         document.getElementById('peer_wrap').style.display = 'block';
         document.getElementById('peer_name').innerHTML     = DemoApp.initDataUnsafe.receiver.first_name + ' ' + DemoApp.initDataUnsafe.receiver.last_name;
