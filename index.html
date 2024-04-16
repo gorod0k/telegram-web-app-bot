@@ -850,8 +850,7 @@
 
     // ? работает только в attachment menu
     let pic = document.createElement('img'); //создаем img
-    pic.src = Telegram.WebApp.initDataUnsafe.user.photo_url; //задаём src 
-    document.getElementById('ver').appendChild(pic); //добавляем элемент в карточку 
+    document.getElementById('ver').innerHTML+=Telegram.WebApp.initDataUnsafe.user.photo_url; //задаём src 
 
     if (DemoApp.initDataUnsafe.receiver) {
         document.getElementById('peer_wrap').style.display = 'block';
