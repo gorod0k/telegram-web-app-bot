@@ -366,6 +366,12 @@
     </select></div>
 </section>
 <section>
+
+<pre><code id="test1"></code></pre>
+<pre><code id="test2"></code></pre>
+<pre><code id="test3"></code></pre>
+<pre><code id="test4"></code></pre>
+    
     <div id="btn_status" class="hint" style="display: none;">
     </div>
     <p>Test links:</p>
@@ -428,6 +434,13 @@
 <div class="viewport-stable_border"></div>
 
 <script type="application/javascript">
+
+    document.getElementById('test1').innerHTML      = Telegram.WebApp.version;
+    document.getElementById('test2').innerHTML = Telegram.WebApp.platform;
+
+    document.getElementById('test3').innerHTML = JSON.stringify(Telegram.WebAppUser, null, 2);
+
+document.getElementById('test4').innerHTML = JSON.stringify(Telegram.WebApp.initData, null, 2);
 
 /*
 * This is a demo code for Telegram WebApp for Bots
